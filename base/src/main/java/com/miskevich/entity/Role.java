@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -12,13 +13,13 @@ import javax.persistence.Table;
 import java.util.Set;
 
 @Data
-@javax.persistence.Entity
+@Entity
 @EqualsAndHashCode(exclude = {"user"})
 @Table(name = "roles")
 @ToString(exclude = "user")
-public class Role extends Entity{
+public class Role extends AnEntity {
 
-    @Column(name = "name")
+    @Column(name = "role_name")
     private String name;
 
     @ManyToMany

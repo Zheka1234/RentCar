@@ -102,6 +102,7 @@
             <version>${ITEXT.PDF.version}</version>
             <type>pom</type>
         </dependency>
+
     </dependencies>
 
 </project>

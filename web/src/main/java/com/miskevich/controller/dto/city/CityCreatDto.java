@@ -1,11 +1,12 @@
-package com.miskevich.dto.city;
+package com.miskevich.controller.dto.city;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
-@Builder
+@Data
 @Schema(description = "Creat city object")
 public class CityCreatDto {
 
@@ -13,7 +14,7 @@ public class CityCreatDto {
     @Schema(example = "city name", required = true, minLength = 2, maxLength = 50)
     private String cityName;
 
-    @Schema(example = "city address", required = true, minLength = 10, maxLength = 50)
+    @Schema(example = "address", required = true, minLength = 10, maxLength = 50)
     @NotNull
     private String address;
 

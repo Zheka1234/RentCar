@@ -6,17 +6,18 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Set;
 
 @Data
-@javax.persistence.Entity
+@Entity
 @Table(name = "city")
 @EqualsAndHashCode(exclude = {"car"})
 @ToString(exclude = {"car"})
-public class City extends Entity{
+public class City extends AnEntity {
 
     @Column(name = "city_name")
     private String cityName;
@@ -26,5 +27,5 @@ public class City extends Entity{
 
     @OneToMany(mappedBy = "city", fetch = FetchType.EAGER)
     @JsonManagedReference
-    Set<Car> car;
+    private Set<Car> car;
 }

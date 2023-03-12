@@ -1,4 +1,4 @@
-package com.miskevich.dto.cotract;
+package com.miskevich.controller.dto.cotract;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.miskevich.dto.roles;
+package com.miskevich.controller.dto.roles;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;

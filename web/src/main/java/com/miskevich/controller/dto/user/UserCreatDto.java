@@ -1,20 +1,14 @@
-package com.miskevich.dto.user;
+package com.miskevich.controller.dto.user;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Builder;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
-@Getter
-@Setter
-@Schema(description = "Update user object")
-public class UserDto {
-
-    @Schema(example = "user id", required = true, minLength = 1, maxLength = 20)
-    @NotNull
-    private int id;
+@Builder
+@Schema(description = "Creat user object")
+public class UserCreatDto {
 
     @Schema(example = "user name", required = true, minLength = 1, maxLength = 20)
     @NotNull

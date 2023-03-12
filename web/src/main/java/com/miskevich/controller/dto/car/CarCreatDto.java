@@ -1,11 +1,12 @@
-package com.miskevich.dto.car;
+package com.miskevich.controller.dto.car;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
-@Builder
+@Data
 @Schema(description = "Creat car object")
 public class CarCreatDto {
 

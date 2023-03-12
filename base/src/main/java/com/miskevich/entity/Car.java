@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -14,11 +15,11 @@ import javax.persistence.Table;
 import java.util.Set;
 
 @Data
-@javax.persistence.Entity
+@Entity
 @Table(name = "car")
-@EqualsAndHashCode(exclude = {"city"})
-@ToString(exclude = {"city"})
-public class Car extends Entity {
+@EqualsAndHashCode(exclude = {"city", "contract"})
+@ToString(exclude = {"city", "contract"})
+public class Car extends AnEntity {
 
     @Column(name = "brand")
     private String brand;
@@ -39,10 +40,6 @@ public class Car extends Entity {
     @OneToMany(mappedBy = "car", fetch = FetchType.EAGER)
     @JsonManagedReference
     Set<Contract> contract;
-
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    @JsonManagedReference
-    Set<Contract> contracts;
 
 
 }

@@ -5,18 +5,19 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Data
-@javax.persistence.Entity
+@Entity
 @Table(name = "contract")
 @EqualsAndHashCode(exclude = {"car", "user"})
 @ToString(exclude = {"car", "user"})
-public class Contract extends Entity{
+public class Contract extends AnEntity {
 
-    @Column(name = "contact_number")
+    @Column(name = "contract_number")
     private String contractNumber;
 
     @Column(name = "passport")

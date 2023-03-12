@@ -7,7 +7,7 @@ spring:
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
     url: ${spring.datasource.url}
-    default-schema: rentcat
+    default-schema: public
     out-of-order: true
     ignore-migration-patterns: '*:ignored'
   datasource:
@@ -26,3 +26,8 @@ server:
 jwt:
   secret: 4357ftsdyfg346rfgsdfhvc473trgwre7hfdsufhbre**
   expiration: 3600000
+
+---
+spring:
+  jpa:
+    generate-ddl: true

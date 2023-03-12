@@ -23,7 +23,7 @@ import java.sql.Timestamp;
 @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class Entity {
+public abstract class AnEntity {
 
     @Id
     @Column(name = "id")
